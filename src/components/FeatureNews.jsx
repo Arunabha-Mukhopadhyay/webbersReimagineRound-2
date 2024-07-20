@@ -31,7 +31,7 @@ const FeaturedNews = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: cardref.current[0], // Use the first card as the trigger
-        start: 'top 80%',
+        start: 'top 100%',
         end: 'bottom 20%',
         scrub: true,
       },
@@ -39,9 +39,10 @@ const FeaturedNews = () => {
 
     tl.fromTo(
       cardref.current,
-      { opacity: 0, y:30},
+      { opacity: 0, y:20,x:-30},
       {
         opacity: 1,
+        x:0,
         y:0,
         duration: 1,
         stagger:0.2,
